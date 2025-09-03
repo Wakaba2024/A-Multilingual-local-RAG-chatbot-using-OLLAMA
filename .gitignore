@@ -1,0 +1,28 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments (uv, venv, etc.)
+.venv/
+venv/
+env/
+ENV/
+
+# uv-specific
+.uv/
+
+# Dependency lock files (if you want to ignore them, optional)
+# uv.lock
+
+# Logs
+*.log
+
+# Editors & IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS-specific
+.DS_Store
+Thumbs.db

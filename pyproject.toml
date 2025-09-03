@@ -1,0 +1,31 @@
+[project]
+name = "rag-finance-bill2025-eng-swa"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "chroma>=0.2.0",
+    "chromadb>=1.0.20",
+    "einops>=0.8.1",
+    "gradio>=5.44.1",
+    "hf-xet>=1.1.9",
+    "huggingface>=0.0.1",
+    "huggingface-hub[hf-xet]>=0.34.4",
+    "langchain>=0.3.27",
+    "langchain-community>=0.3.29",
+    "langchain-core>=0.3.75",
+    "langchain-ollama>=0.3.7",
+    "langchain-text-splitters>=0.3.11",
+    "numpy>=2.3.2",
+    "ollama>=0.5.3",
+    "onnx>=1.19.0",
+    "pandas>=2.3.2",
+    "pdfplumber>=0.11.7",
+    "pillow>=11.3.0",
+    "protobuf>=6.32.0",
+    "scikit-learn>=1.7.1",
+    "sentence-transformers>=5.1.0",
+    "streamlit>=1.49.1",
+    "unstructured[all-docs]>=0.18.14",
+]
