@@ -1,0 +1,19 @@
+ollama
+gradio
+langchain
+chromadb
+pandas
+pillow
+numpy
+langchain_community
+langchain_text_splitters
+langchain-ollama
+langchain-core
+unstructured
+unstructured[all-docs]
+protobuf
+huggingface                              
+huggingface-hub 
+pdfplumber
+ollama nomic-embed-text
+streamlit
