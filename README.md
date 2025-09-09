@@ -1,6 +1,7 @@
 # Multilingual Finance Bill RAG Chatbot
 
-A simple Streamlit app that lets you upload a Finance Bill PDF and ask questions using a Retrieval-Augmented Generation (RAG) pipeline with **Ollama**, **LangChain**, and **Chroma**.
+## Overview
+A simple Streamlit app that lets you upload a Finance Bill PDF and ask questions using a Retrieval-Augmented Generation (RAG) pipeline with **Ollama**, **LangChain**, and **Chroma**. This multilingual Retrieval-Augmented Generation (RAG) model is designed to adapt its responses to the language of the user’s query. If a user asks a question in English, the model retrieves relevant information and generates an answer in English. Similarly, if the query is in Swahili, the model understands it, retrieves the most relevant information, and responds in Swahili. The model both understands and respects the user’s language preference, creating a natural and accessible interaction experience.
 
 ---
 
@@ -12,7 +13,7 @@ A simple Streamlit app that lets you upload a Finance Bill PDF and ask questions
 
 ---
 
-## 🛠️ Installation
+## 🛠️ Installation and Usage
 
 ### 1. Prerequisites
 Make sure you have the following installed:
@@ -41,22 +42,42 @@ ollama pull llama3.1           # LLM for answering questions
 
 ---
 
-##  Run the App
-```bash
-streamlit run app.py
-```
+##  Usage
+This project contains two primary files: RAG_Bill_Refined.ipynb and app.py.
 
+Running the Jupyter Notebook
+The RAG_Bill_Refined.ipynb notebook provides a step-by-step walkthrough of the RAG pipeline
+
+Running the Streamlit Application
+The app.py script provides a user-friendly web interface for the chatbot.
+
+Run the application from your terminal with the command:
+``
+streamlit run app.py.
+``
+A web browser window will open, allowing you to upload the Finance Bill PDF and ask questions directly.
 
 
 ---
 
 ---
 
-##  Notes
-- Make sure Ollama is running (`ollama serve` usually runs automatically).  
-- The first model load may take longer, but subsequent queries will be faster.  
-- `nomic-embed-text` supports **multiple languages**, including **English** and **Swahili**.  
+##  Notes 
+
+- Ensure you have Ollama installed and have downloaded the nomic-embed-text and llama3.1 models by running ollama pull nomic-embed-text and ollama pull llama3.1 in your terminal.
+- Install the required Python libraries
   
 
 ---
+
+## Results
+The project successfully demonstrates a functional RAG system for question-answering on a specific PDF document.
+
+1. Multilingual Capability: The chatbot correctly processes and responds to questions in both English and Swahili, as shown by the sample queries "What is the main idea of this document?" and "Mswada wa fedha wa 2025 unahusu nini?".
+
+2. Contextual Accuracy: The system accurately extracts and uses information from the provided document to answer questions about taxes, exemptions, and key legislative points. For example, when asked about the taxes addressed, it correctly lists Income Tax, Excise Duty, and others, along with specific details like the presumptive income tax rate.
+
+3. Handling Unrelated Queries: The chatbot is designed to handle questions for which no information exists in the document. When asked about World War 2, it correctly states that the document does not contain information on that topic, preventing hallucination and providing a reliable response.
+
+4. Efficient Retrieval: The use of a MultiQueryRetriever and a vector database ensures that the system retrieves the most relevant document chunks to form a comprehensive answer, even when the user's initial query is not perfectly phr
 
